@@ -1,7 +1,7 @@
 doctype html
 html(lang="de")
   head
-    title Tiroler Intigrationsforum
+    title Tiroler Integrationsforum
     meta(name="author" content="Manuel Widmoser")
     meta(name="description" content="Tiroler Integrationsforum. Das Integrationsforum besteht schon seit über 10 Jahren und ist eine unabhängige Plattform von Privatpersonen sowie von ...")
     meta(charset="utf-8")
@@ -10,6 +10,50 @@ html(lang="de")
     
     link(href="css/main.css" rel="stylesheet" type="text/css")
     
+    script(src="js/classie.js")
+    script(src="js/nav.js")
+    script(src="js/slideshow.js")
+    
   
   body
-    h1 Test
+    header
+      .container
+        a(href="index.html")
+          img(src="img/03_LOGO-TIF.png" alt="Tiroler Integrationsforum TIF tif")#logo
+        nav
+          a(href="index.html") Home
+          a(href="#akt") Aktuelles
+          a(href="#info") Informationen
+          a(href="#org") Organisation
+          a(href="#kon") Kontakt
+    
+    // Main Content 
+    .clearfix(style="height: 100px")
+      
+    // Image Slider
+      
+    .slideshow-container
+      .mySlide.fade
+        .numbertext 1 / 3
+        img(src="img/slide1.jpg" style="width: 100%")
+        .text Caption Text
+      
+      .mySlide.fade
+        .numbertext 1 / 3
+        img(src="img/slide2.jpg" style="width: 100%")
+        .text Caption Text
+          
+      .mySlide.fade
+        .numbertext 1 / 3
+        img(src="img/slide3.jpg" style="width: 100%")
+        .text Caption Text
+
+      a(onclick="plusSlides(-1)").prev &#10094;
+      a(onclick="plusSlides(1)").next &#10095;
+      
+      br
+      
+      div(style="text-align: center")
+        span(onclick="currentSlide(1)").dot
+        span(onclick="currentSlide(2)").dot
+        span(onclick="currentSlide(3)").dot
