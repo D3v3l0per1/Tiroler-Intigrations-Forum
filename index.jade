@@ -9,12 +9,21 @@ html(lang="de")
     meta(name="viewport" content="width=device-width, initial-width=1")
     
     link(href="css/main.css" rel="stylesheet" type="text/css")
+    link(href="favicon.ico" rel="shortcut icon" type="image/x-icon")
     
     script(src="js/jquery-3.1.1.min.js")
     script(src="js/jquery.cycle2.min.js")
     script(src="js/nav.js")
     script(src="js/classie.js")
-    
+    script 
+        |function navtoggle(x) {
+        | x.classList.toggle("change");
+        |}
+    script
+      |function dropdownfunc() {
+      |  document.getElementById("myDropdown").classList.toggle("show");
+      |}
+      
   
   body
     header
@@ -27,6 +36,15 @@ html(lang="de")
           a(href="#info") Informationen
           a(href="#org") Organisation
           a(href="#kon") Kontakt
+          
+        .dropdown
+          button(onclick="dropdownfunc()").dropbtn Dropdown 
+          #myDropdown.dropdown-content
+            a(href="#").content Home
+            a(href="#") Aktuelles
+            a(href="#") Informationen
+            a(href="#") Organisation
+            a(href="#") Kontakt
     
     // Main Content 
     .clearfix(style="height: 100px")
@@ -39,63 +57,166 @@ html(lang="de")
         span.cycle-prev &#9001;
         span.cycle-next &#9002;
         span.cycle-pager
-        img(src="img/slide1.jpg")
-        img(src="img/slide2.jpg")
-        img(src="img/slide3.jpg")
+        img(src="img/header_1.jpeg")
+        img(src="img/header_2.jpeg")
+        img(src="img/header_3.jpeg")
         
       // Aktuelles
       
-      h1 Aktuelles
-      
-      iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTiroler-Integrationsforum-182379178474675%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true")
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
+      #akt
+        h1 Aktuelles
+        
+        iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTiroler-Integrationsforum-182379178474675%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" style="overflow:hidden;" scrolling="yes" frameborder="0" allowTransparency="true")
+  
+      #info
+        h1 Informationen
+        
+        .info-container
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          br
+          br
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          
+      #org
+        h1 Organisationen
+        
+        .logos
+          .img-container
+            img(src="img/logo_caritas.png")
+            .overlay
+              a(href="https://www.caritas.at/" target="_blank").text Caritas
+              
+          .img-container
+            img(src="img/logo_diakonie.png")
+            .overlay
+              a(href="https://fluechtlingsdienst.diakonie.at/" target="_blank").text Diakonie Flüchtlingsheim 
+                  
+          .img-container
+            img(src="img/logo_faal.png")
+            .overlay
+              a(href="https://www.frauenausallenlaendern.org/" target="_blank").text Frauen aus allen Ländern 
+                      
+          .img-container
+            img(src="img/logo_hdb.png")
+            .overlay
+              a(href="http://hdb.dibk.at/node_404" target="_blank").text Haus der Begegnung 
+              
+          br
+        
+          .img-container
+            img(src="img/logo_im.png")
+            .overlay
+              a(href="http://www.initiative.minderheiten.at/" target="_blank").text initiative Minderheiten
+          
+          .img-container
+            img(src="img/logo_innovia.png")
+            .overlay
+              a(href="http://www.innovia.at/neu/?fontsize=100" target="_blank" style="text-align:center").text Innovia - Service und <br> Beratung zur <br> Chancengleichheit gem. GmbH
+              
+          .img-container
+            img(src="img/logo_ib.png")
+            .overlay
+              a(href="http://www.integrationsbuero.at/" target="_blank").text integrationsbüro 
+                  
+          .img-container
+            img(src="img/LEA-5_Stars.png")
+            .overlay
+              a(href="http://www.lea-produktionsschule.eu/" target="_blank").text LEA Produktionsschule
+              
+          br
+          
+          .img-container
+            img(src="img/logo_komm.png")
+            .overlay
+              a(href="http://web.kommunity.me/" target="_blank").text Kommunity
+              
+          .img-container
+            img(src="img/logo_örk.png")
+            .overlay
+              a(href="https://www.roteskreuz.at/home/" target="_blank").text Österreichisches Rotes Kreuz 
+                  
+          .img-container
+            img(src="img/logo_pr.png")
+            .overlay
+              a(href="http://www.plattform-rechtsberatung.at/index.php/de/" target="_blank").text Plattform Rechtsberatung 
+                      
+          .img-container
+            img(src="img/logo_tigra.png")
+            .overlay
+              a(href="http://www.tigra.cc/" target="_blank").text TIGRA 
+              
+          br
+        
+          .img-container
+            img(src="img/logo_fh.png")
+            .overlay
+              a(href="http://frauenhaus-tirol.at/" target="_blank").text Frauenhaus Tirol
+          
+          .img-container
+            img(src="img/logo_fp.png")
+            .overlay
+              a(href="http://www.fluchtpunkt.org/" target="_blank").text Projekt FLUCHTpunkt 
+              
+          .img-container
+            img(src="img/logo_vffl.png")
+            .overlay
+              a(href="http://www.fluechtling.org/" target="_blank" style="text-align:center").text Verein Frendeskreis <br> Flüchtlingsheim Landhaus <br> St. Gertraudi 
+                  
+          .img-container
+            img(src="img/logo_vm.png")
+            .overlay
+              a(href="http://www.migration.cc/" target="_blank").text Verein Multikulturell 
+              
+          br
+          
+          .img-container
+            img(src="img/logo_z6.png")
+            .overlay
+              a(href="https://www.z6online.com/" target="_blank").text Z6 Zentrum für Jugendarbeit 
+              
+          .img-container
+            img(src="img/logo_zemit.png")
+            .overlay
+              a(href="http://www.zemit.at/de/" target="_blank" style="text-align:center").text ZeMiT - Zentrum für <br> Migrannten und Flüchtlinge 
+                  
+          .img-container
+            img(src="img/logo_kcl.png")
+            .overlay
+              a(href="http://www.corrientelatina.at/" target="_blank").text Kulturverein Corriente Latina 
+              
+          .img-container
+            img(src="img/logo_you.png")
+            .overlay
+              a(href="#" style="text-align:center").text Hier könnte Ihr <br> Logo sein
+  
+      #kon
+        h1 Kontakt
+        
+        .kontakt_content
+          p 
+            | Tiroler IntegrationsForum
+            br
+            br
+            | Straße xyz
+            br
+            br
+            | 6020 Innsbruck
+            br
+            br
+            | Email: 
+            a(href="mailto:tirolerintegrationsforum@gmail.com") tirolerintegrationsforum@gmail.com 
+            br
+            br
+            | Telefon:
+            br
+            br
+            br
+            
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43143.855950996156!2d12.047090340274245!3d47.48034757826603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776330a4176e5b1%3A0x40097572de69060!2zV8O2cmds!5e0!3m2!1sde!2sat!4v1494939770726" width="100%" height="450" frameborder="0" style="border:none" allowfullscreen)
+    
+    footer
+      p &copy; 2017 - 
+        a(href="http://www.lea-produktionsschule.eu/" target="_blank") LEA Produktionsschule
+        | , Desgin & Layout by Manuel Widmoser

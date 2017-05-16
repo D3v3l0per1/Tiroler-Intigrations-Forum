@@ -8,25 +8,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-width=1">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.cycle2.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/classie.js"></script>
+    <script> 
+      function navtoggle(x) {
+      x.classList.toggle("change");
+      }
+    </script>
+    <script>
+      function dropdownfunc() {
+       document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
   </head>
   <body>
     <header>
       <div class="container"><a href="index.html"><img src="img/03_LOGO-TIF.png" alt="Tiroler Integrationsforum TIF tif" id="logo"></a>
         <nav><a class="content" href="index.html">Home</a><a href="#akt">Aktuelles</a><a href="#info">Informationen</a><a href="#org">Organisation</a><a href="#kon">Kontakt</a></nav>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="dropdownfunc()">Dropdown </button>
+          <div class="dropdown-content" id="myDropdown"><a class="content" href="#">Home</a><a href="#">Aktuelles</a><a href="#">Informationen</a><a href="#">Organisation</a><a href="#">Kontakt</a></div>
+        </div>
       </div>
     </header>
     <!-- Main Content -->
     <div class="clearfix" style="height: 100px;"></div>
     <div class="main-container">
       <!-- Image Slider-->
-      <div class="cycle-slideshow" data-cycle-tile-count="10"><span class="cycle-prev">&#9001;</span><span class="cycle-next">&#9002;</span><span class="cycle-pager"></span><img src="img/slide1.jpg"><img src="img/slide2.jpg"><img src="img/slide3.jpg"></div>
+      <div class="cycle-slideshow" data-cycle-tile-count="10"><span class="cycle-prev">&#9001;</span><span class="cycle-next">&#9002;</span><span class="cycle-pager"></span><img src="img/header_1.jpeg"><img src="img/header_2.jpeg"><img src="img/header_3.jpeg"></div>
       <!-- Aktuelles-->
-      <h1>Aktuelles</h1>
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTiroler-Integrationsforum-182379178474675%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false&amp;appId" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <div id="akt">
+        <h1>Aktuelles</h1>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTiroler-Integrationsforum-182379178474675%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false&amp;appId" style="overflow:hidden;" scrolling="yes" frameborder="0" allowTransparency="true"></iframe>
+      </div>
+      <div id="info">
+        <h1>Informationen</h1>
+        <div class="info-container">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+      <div id="org">
+        <h1>Organisationen</h1>
+        <div class="logos">
+          <div class="img-container"><img src="img/logo_caritas.png">
+            <div class="overlay"><a class="text" href="https://www.caritas.at/" target="_blank">Caritas</a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_diakonie.png">
+            <div class="overlay"><a class="text" href="https://fluechtlingsdienst.diakonie.at/" target="_blank">Diakonie Flüchtlingsheim </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_faal.png">
+            <div class="overlay"><a class="text" href="https://www.frauenausallenlaendern.org/" target="_blank">Frauen aus allen Ländern </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_hdb.png">
+            <div class="overlay"><a class="text" href="http://hdb.dibk.at/node_404" target="_blank">Haus der Begegnung </a></div>
+          </div><br>
+          <div class="img-container"><img src="img/logo_im.png">
+            <div class="overlay"><a class="text" href="http://www.initiative.minderheiten.at/" target="_blank">initiative Minderheiten</a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_innovia.png">
+            <div class="overlay"><a class="text" href="http://www.innovia.at/neu/?fontsize=100" target="_blank" style="text-align:center;">Innovia - Service und <br> Beratung zur <br> Chancengleichheit gem. GmbH</a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_ib.png">
+            <div class="overlay"><a class="text" href="http://www.integrationsbuero.at/" target="_blank">integrationsbüro </a></div>
+          </div>
+          <div class="img-container"><img src="img/LEA-5_Stars.png">
+            <div class="overlay"><a class="text" href="http://www.lea-produktionsschule.eu/" target="_blank">LEA Produktionsschule</a></div>
+          </div><br>
+          <div class="img-container"><img src="img/logo_komm.png">
+            <div class="overlay"><a class="text" href="http://web.kommunity.me/" target="_blank">Kommunity</a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_örk.png">
+            <div class="overlay"><a class="text" href="https://www.roteskreuz.at/home/" target="_blank">Österreichisches Rotes Kreuz </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_pr.png">
+            <div class="overlay"><a class="text" href="http://www.plattform-rechtsberatung.at/index.php/de/" target="_blank">Plattform Rechtsberatung </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_tigra.png">
+            <div class="overlay"><a class="text" href="http://www.tigra.cc/" target="_blank">TIGRA </a></div>
+          </div><br>
+          <div class="img-container"><img src="img/logo_fh.png">
+            <div class="overlay"><a class="text" href="http://frauenhaus-tirol.at/" target="_blank">Frauenhaus Tirol</a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_fp.png">
+            <div class="overlay"><a class="text" href="http://www.fluchtpunkt.org/" target="_blank">Projekt FLUCHTpunkt </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_vffl.png">
+            <div class="overlay"><a class="text" href="http://www.fluechtling.org/" target="_blank" style="text-align:center;">Verein Frendeskreis <br> Flüchtlingsheim Landhaus <br> St. Gertraudi </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_vm.png">
+            <div class="overlay"><a class="text" href="http://www.migration.cc/" target="_blank">Verein Multikulturell </a></div>
+          </div><br>
+          <div class="img-container"><img src="img/logo_z6.png">
+            <div class="overlay"><a class="text" href="https://www.z6online.com/" target="_blank">Z6 Zentrum für Jugendarbeit </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_zemit.png">
+            <div class="overlay"><a class="text" href="http://www.zemit.at/de/" target="_blank" style="text-align:center;">ZeMiT - Zentrum für <br> Migrannten und Flüchtlinge </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_kcl.png">
+            <div class="overlay"><a class="text" href="http://www.corrientelatina.at/" target="_blank">Kulturverein Corriente Latina </a></div>
+          </div>
+          <div class="img-container"><img src="img/logo_you.png">
+            <div class="overlay"><a class="text" href="#" style="text-align:center;">Hier könnte Ihr <br> Logo sein</a></div>
+          </div>
+        </div>
+      </div>
+      <div id="kon">
+        <h1>Kontakt</h1>
+        <div class="kontakt_content">
+          <p>
+             Tiroler IntegrationsForum<br><br>Straße xyz<br><br>6020 Innsbruck<br><br>Email: <a href="mailto:tirolerintegrationsforum@gmail.com">tirolerintegrationsforum@gmail.com </a><br><br>Telefon:<br><br><br></p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43143.855950996156!2d12.047090340274245!3d47.48034757826603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776330a4176e5b1%3A0x40097572de69060!2zV8O2cmds!5e0!3m2!1sde!2sat!4v1494939770726" width="100%" height="450" frameborder="0" style="border:none;" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-  </body><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+      <p>&copy; 2017 - <a href="http://www.lea-produktionsschule.eu/" target="_blank">LEA Produktionsschule</a>, Desgin & Layout by Manuel Widmoser</p>
+    </footer>
+  </body>
 </html>
